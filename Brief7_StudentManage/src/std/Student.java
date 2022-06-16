@@ -1,20 +1,27 @@
-package stdManage.entity;
+package std;
 
 public class Student {
-	
 	private int id;
-	private String email, first_name, last_name, address, city, country;
+	private String first_name, last_name, email, address, city, country;
+	public Student() {
+		super();
+	}
+	public Student(int id, String first_name, String last_name, String email, String address, String city,
+			String country) {
+		super();
+		this.id = id;
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.email = email;
+		this.address = address;
+		this.city = city;
+		this.country = country;
+	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
 	}
 	public String getFirst_name() {
 		return first_name;
@@ -27,6 +34,12 @@ public class Student {
 	}
 	public void setLast_name(String last_name) {
 		this.last_name = last_name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getAddress() {
 		return address;
@@ -46,25 +59,9 @@ public class Student {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	public Student() {
-		super();
-	}
-	public Student(int id, String email, String first_name, String last_name, String address, String city, String country) {
-		super();
-		this.id = id;
-		this.email = email;
-		this.first_name = first_name;
-		this.last_name = last_name;
-		this.address = address;
-		this.city = city;
-		this.country = country;
-	}
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", email=" + email + ", first_name=" + first_name + ", last_name=" + last_name
+		return "Student [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", email=" + email
 				+ ", address=" + address + ", city=" + city + ", country=" + country + "]";
 	}
-	
-	
-	
 }

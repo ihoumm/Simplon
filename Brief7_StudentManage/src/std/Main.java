@@ -1,18 +1,20 @@
-package stdManage.view;
-	
-import java.io.IOException;
+package std;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Stage;
 
+public class Main extends Application{
 
-public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
+		
+		
 		Parent root = FXMLLoader.load(Main.class.getResource("MainStdManage.fxml"));
+		
 		Scene scene = new Scene(root, 1300, 800);
 		
 		primaryStage.setScene(scene);
@@ -21,5 +23,6 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		launch(args);
+	
 	}
 }

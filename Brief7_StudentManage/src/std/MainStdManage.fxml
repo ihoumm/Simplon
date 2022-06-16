@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1320.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainStdManageController">
+   <children>
+      <Pane layoutX="33.0" layoutY="57.0" prefHeight="765.0" prefWidth="380.0" style="-fx-background-color: #97B1A6;" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="89.0" prefWidth="380.0">
+               <children>
+                  <Label layoutX="6.0" layoutY="3.0" prefHeight="80.0" prefWidth="368.0" text="Student Manegement">
+                     <font>
+                        <Font name="Georgia Bold Italic" size="33.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="100.0" layoutY="86.0" prefHeight="10.0" prefWidth="200.0" style="-fx-background-color: #82ccdd;" />
+               </children>
+            </Pane>
+            <Label layoutX="14.0" layoutY="155.0" text="Student Id">
+               <font>
+                  <Font name="Georgia Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="226.0" text="First Name">
+               <font>
+                  <Font name="Georgia Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="288.0" text="Last Name">
+               <font>
+                  <Font name="Georgia Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="354.0" text="Email">
+               <font>
+                  <Font name="Georgia Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="426.0" text="Address">
+               <font>
+                  <Font name="Georgia Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="499.0" text="City">
+               <font>
+                  <Font name="Georgia Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="571.0" text="Country">
+               <font>
+                  <Font name="Georgia Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id_txt" layoutX="140.0" layoutY="155.0" prefHeight="25.0" prefWidth="231.0" />
+            <TextField fx:id="firstName_txt" layoutX="140.0" layoutY="226.0" prefHeight="25.0" prefWidth="231.0" text="User fName" />
+            <TextField fx:id="lastName_txt" layoutX="140.0" layoutY="288.0" prefHeight="25.0" prefWidth="231.0" text="User lName" />
+            <TextField fx:id="email_txt" layoutX="140.0" layoutY="354.0" prefHeight="25.0" prefWidth="231.0" text="user@user.ma" />
+            <TextField fx:id="address_txt" layoutX="140.0" layoutY="426.0" prefHeight="25.0" prefWidth="231.0" text="Default Place" />
+            <TextField fx:id="city_txt" layoutX="140.0" layoutY="499.0" prefHeight="25.0" prefWidth="231.0" text="Default City" />
+            <TextField fx:id="country_txt" layoutX="140.0" layoutY="571.0" prefHeight="25.0" prefWidth="231.0" text="Default Country" />
+            
+            <Button fx:id="add_btn" layoutX="16.0" layoutY="689.0" mnemonicParsing="false" onAction="#add" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: orange;" text="Add" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold Italic" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="update_btn" layoutX="138.0" layoutY="689.0" mnemonicParsing="false" onAction="#update" style="-fx-background-color: green;" text="Update" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold Italic" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="delete_btn" layoutX="262.0" layoutY="689.0" mnemonicParsing="false" onAction="#delete" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: red;" text="Delete" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold Italic" size="20.0" />
+               </font>
+            </Button>
+            <Pane layoutX="88.0" layoutY="649.0" prefHeight="10.0" prefWidth="200.0" style="-fx-background-color: #82ccdd;" />
+         </children></Pane>
+      <Pane layoutX="2.0" layoutY="679.0" prefHeight="39.0" prefWidth="720.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="529.0" layoutY="11.0" prefHeight="17.0" prefWidth="263.0" text="© All rights reserved | SoussTalent 101" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="380.0" layoutY="123.0" prefHeight="765.0" prefWidth="20.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="35.0" AnchorPane.topAnchor="0.0" />
+      <TableView fx:id="table" layoutX="400.0" layoutY="8.0" prefHeight="765.0" prefWidth="920.0" style="-fx-background-color: #97B1A6;" AnchorPane.bottomAnchor="35.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="id_col" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="firstName_col" prefWidth="102.0" text="First Name" />
+            <TableColumn fx:id="lastName_col" prefWidth="102.0" text="Last Name" />
+            <TableColumn fx:id="email_col" prefWidth="208.0" text="Email" />
+            <TableColumn fx:id="address_col" prefWidth="235.0" text="Address" />
+            <TableColumn fx:id="city_col" prefWidth="103.0" text="City" />
+            <TableColumn fx:id="country_col" prefWidth="94.0" text="Country" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
