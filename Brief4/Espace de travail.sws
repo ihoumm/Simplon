@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner signature="Workspace" version="15.1.0.2850"?>
+<!-- Veuillez ne pas modifier ce fichier -->
+
+<Workspace>
+	<Local Expanded="Yes">
+		<Model Expanded="Yes" ID="{76D3E1D4-5918-4193-820A-1E3DA49A9EAA}" Loaded="No" Name="DiagCasUtilisation_Breif4" OpenedReadOnly="Yes" Selected="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="DiagCasUtilisation_Breif4.moo"/>
+		<Model ID="{76D3E1D4-5918-4193-820A-1E3DA49A9EAA}" Name="DiagCasUtilisation_Breif4" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="DiagCasUtilisation_Breif4.moo"/>
+	</Local>
+	<BrowserModule Name="Référentiel"/>
+</Workspace>
