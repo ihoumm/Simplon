@@ -1,0 +1,111 @@
+package salaryCalculator;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String fullName;
+		int operationType;
+		int count = 0;
+		double totalHoursWorkedPerWeek;
+		double totalHoursWorkedPerMonth;
+		double weeklyHourRate;
+		double monthlyHourRate;
+		double minHoursPerWeek = 40;
+		double standardHoursPerWeek = 50;
+		double minHoursPerMonth = 180;
+		double maxHoursPerMonth = 200;
+		double overtimeBonus;
+		double result;
+		
+
+		Scanner input = new Scanner(System.in); // the new keyword is used to create an instance of the class.
+		// A message that prompts the employee to enter their name
+		System.out.println("Enter your Name: ");
+		fullName = input.next();
+
+		// A welcome message on behalf of the user
+		System.out.println("We're so glad to see you here, " + fullName + "!");
+		
+		do {
+				count++;
+				System.out.println("\nChoose monthly/weekly payment method:");
+				System.out.println("5. weekly");
+				System.out.println("6. monthly");
+				System.out.println("0. exist");
+				
+				System.out.print("Type the operation Number : ");
+				operationType = input.nextInt();
+				if (operationType == 0) {
+					System.out.print("Exit!");
+					input.close(); // close
+					break;
+				
+				}
+			
+			if (count == 4) {
+
+				do {
+					System.out.print("Number of hours worked per week: ");
+					totalHoursWorkedPerWeek = input.nextDouble();
+					if (totalHoursWorkedPerWeek > standardHoursPerWeek) {
+						System.out.print("Sorry ! The total number of hours can't exceed " + standardHoursPerWeek
+								+ " hours per week!\r\n");
+					}
+				} while (totalHoursWorkedPerWeek > standardHoursPerWeek);
+
+				do {
+					System.out.print("Enter Rate Per Hour: ");
+					weeklyHourRate = input.nextDouble();
+					if (weeklyHourRate < 25) {
+						// The rate per hour can't be less than 25 DH per hour
+						System.out.print("The rate per hour can't be less than 25 DH per hour!\r\n");
+					}
+				} while (weeklyHourRate < 25);
+
+				result = totalHoursWorkedPerWeek * weeklyHourRate;
+
+				if (minHoursPerWeek < totalHoursWorkedPerWeek && totalHoursWorkedPerWeek <= standardHoursPerWeek) {
+					overtimeBonus = totalHoursWorkedPerWeek - minHoursPerWeek;
+					result = (minHoursPerWeek * weeklyHourRate) + overtimeBonus * (weeklyHourRate + weeklyHourRate / 2);
+				}
+				System.out.println("Your Weekly Salary Amount is " + result + " DH");
+
+			} else if (operationType == 5) {
+
+				do {
+					System.out.print("Number of hours worked per month: ");
+					totalHoursWorkedPerMonth = input.nextDouble();
+					if (totalHoursWorkedPerMonth > maxHoursPerMonth) {
+						System.out.print(
+								"The total number of hours can't exceed " + maxHoursPerMonth + " hours per month!\r\n");
+					}
+				} while (totalHoursWorkedPerMonth > maxHoursPerMonth);
+
+				do {
+					System.out.print("Enter Rate Per Hour: ");
+					monthlyHourRate = input.nextDouble();
+					if (monthlyHourRate < 20) {
+						// The rate per hour can't be less than 20 DH per hour
+						System.out.print("The rate per hour can't be less than 20 DH per hour!\r\n");
+					}
+				} while (monthlyHourRate < 20);
+
+				result = totalHoursWorkedPerMonth * monthlyHourRate;
+				if (minHoursPerMonth < totalHoursWorkedPerMonth && totalHoursWorkedPerMonth <= maxHoursPerMonth) {
+					overtimeBonus = totalHoursWorkedPerMonth - minHoursPerMonth;
+					result = (minHoursPerMonth * monthlyHourRate)
+							+ overtimeBonus * (monthlyHourRate + monthlyHourRate / 2);
+				}
+				System.out.println("Your  Monthly  Salary is " + result + " DH");
+
+			}
+
+		} while (true);
+
+		//input.close();
+	}
+
+}
