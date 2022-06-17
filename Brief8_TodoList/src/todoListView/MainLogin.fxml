@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="LoginInerface" prefHeight="438.0" prefWidth="968.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todoListController.MainLoginController">
+   <children>
+      <Label layoutX="23.0" layoutY="82.0" text="Username">
+         <font>
+            <Font name="Georgia Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="203.0" text="Password">
+         <font>
+            <Font name="Georgia Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="username_txt" layoutX="87.0" layoutY="123.0" prefHeight="39.0" prefWidth="372.0" style="-fx-background-color: white;">
+         <font>
+            <Font name="Georgia Bold Italic" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="password_txt" layoutX="87.0" layoutY="246.0" prefHeight="39.0" prefWidth="372.0" style="-fx-background-color: white;">
+         <font>
+            <Font name="Georgia Bold Italic" size="20.0" />
+         </font>
+      </TextField>
+      <Pane layoutX="87.0" layoutY="284.0" prefHeight="2.0" prefWidth="372.0" style="-fx-background-color: black;" />
+      <Button fx:id="login_btn" layoutX="87.0" layoutY="344.0" mnemonicParsing="false" onAction="#login" prefHeight="50.0" prefWidth="151.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 100;" text="Login" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold Italic" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="signUp_btn" layoutX="273.0" layoutY="344.0" mnemonicParsing="false" onAction="#signUp" prefHeight="50.0" prefWidth="151.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 100;" text="Sign Up" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold Italic" size="25.0" />
+         </font>
+      </Button>
+      <Pane layoutX="545.0" prefHeight="438.0" prefWidth="423.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="-6.0" prefHeight="438.0" prefWidth="15.0" style="-fx-background-color: black;" />
+            <ImageView fitHeight="396.0" fitWidth="390.0" layoutX="28.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../recources/todoListe.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="87.0" layoutY="161.0" prefHeight="2.0" prefWidth="372.0" style="-fx-background-color: black;" />
+   </children>
+</AnchorPane>
