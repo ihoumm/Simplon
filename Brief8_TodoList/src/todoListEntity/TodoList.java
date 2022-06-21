@@ -1,31 +1,29 @@
 package todoListEntity;
 
 public class TodoList {
-	private int todoId, categoryId;
-	private String title, description, status, deadline;
+	private int todoId;
+	private String title;
+	private String description;
+	private String status;
+	private String deadline;
+	private int categoryId;
 	public TodoList() {
 		super();
 	}
-	public TodoList(int todoId, int categoryId, String title, String description, String status, String deadline) {
+	public TodoList(int todoId, String title, String description, String status, String deadline, int categoryId) {
 		super();
 		this.todoId = todoId;
-		this.categoryId = categoryId;
 		this.title = title;
 		this.description = description;
 		this.status = status;
 		this.deadline = deadline;
+		this.categoryId = categoryId;
 	}
 	public int getTodoId() {
 		return todoId;
 	}
 	public void setTodoId(int todoId) {
 		this.todoId = todoId;
-	}
-	public int getCategoryId() {
-		return categoryId;
-	}
-	public void setCategoryId(int categoryId) {
-		this.categoryId = categoryId;
 	}
 	public String getTitle() {
 		return title;
@@ -51,10 +49,16 @@ public class TodoList {
 	public void setDeadline(String deadline) {
 		this.deadline = deadline;
 	}
+	public int getCategoryId() {
+		return categoryId;
+	}
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
+	}
 	@Override
 	public String toString() {
-		return "TodoList [todoId=" + todoId + ", categoryId=" + categoryId + ", title=" + title + ", description="
-				+ description + ", status=" + status + ", deadline=" + deadline + "]";
+		return "TodoList [todoId=" + todoId + ", title=" + title + ", description=" + description + ", status=" + status
+				+ ", deadline=" + deadline + ", categoryId=" + categoryId + "]";
 	}
 	
 }

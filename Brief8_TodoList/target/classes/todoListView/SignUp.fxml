@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="358.0" styleClass="white-pane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todoListController.SignUpController">
+   <children>
+      <Label text="Se connecter">
+         <font>
+            <Font name="Georgia Bold Italic" size="20.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="20.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="30.0" prefWidth="273.0" styleClass="tf_box" stylesheets="@application.css">
+         <VBox.margin>
+            <Insets left="15.0" right="20.0" top="10.0" />
+         </VBox.margin>
+         <children>
+            <TextField fx:id="username_txt" prefHeight="31.0" prefWidth="323.0" promptText="Nom d4utilisateur" styleClass="tf">
+               <font>
+                  <Font name="Georgia Bold Italic" size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox prefHeight="30.0" prefWidth="273.0" styleClass="tf_box" stylesheets="@application.css">
+         <VBox.margin>
+            <Insets left="15.0" right="20.0" top="30.0" />
+         </VBox.margin>
+         <children>
+            <TextField fx:id="pwd_txt" prefHeight="31.0" prefWidth="323.0" promptText="Mot de passe" styleClass="tf">
+               <font>
+                  <Font name="Georgia Bold Italic" size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox prefHeight="30.0" prefWidth="273.0" styleClass="tf_box" stylesheets="@application.css">
+         <VBox.margin>
+            <Insets left="15.0" right="20.0" top="30.0" />
+         </VBox.margin>
+         <children>
+            <TextField fx:id="confpwd_txt" prefHeight="31.0" prefWidth="323.0" promptText="Confirmer le mot de passe" styleClass="tf">
+               <font>
+                  <Font name="Georgia Bold Italic" size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="inscrir_btn" mnemonicParsing="false" onAction="#SignUp" styleClass="pink-btn" text="S'inscrir">
+               <font>
+                  <Font name="Georgia Bold Italic" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" right="20.0" top="15.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
