@@ -3,16 +3,17 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="358.0" styleClass="white-pane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todoListController.LoginController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="358.0" spacing="10.0" styleClass="signIn-pane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todoListController.LoginController">
    <children>
-      <Label text="Se connecter">
+      <Label styleClass="pink-btn" text="Se connecter" textFill="#030000">
          <font>
-            <Font name="Georgia Bold Italic" size="20.0" />
+            <Font name="Georgia Bold Italic" size="45.0" />
          </font>
          <VBox.margin>
             <Insets left="20.0" />
@@ -23,7 +24,7 @@
             <Insets left="15.0" right="20.0" top="10.0" />
          </VBox.margin>
          <children>
-            <TextField fx:id="username_txt" prefHeight="34.0" prefWidth="303.0" styleClass="tf" stylesheets="@application.css" text="Nom d'utilisateur">
+            <TextField fx:id="username_txt" prefHeight="29.0" prefWidth="324.0" promptText="Nom d'utilisateur" styleClass="tf" stylesheets="@application.css">
                <font>
                   <Font name="Georgia Bold Italic" size="15.0" />
                </font>
@@ -31,22 +32,22 @@
          </children>
       </HBox>
       <HBox prefHeight="30.0" prefWidth="273.0" styleClass="tf_box" stylesheets="@application.css">
-         <children>
-            <TextField fx:id="password_txt" prefHeight="34.0" prefWidth="304.0" promptText="Mot de Passe" styleClass="tf">
-               <font>
-                  <Font name="Georgia Bold Italic" size="15.0" />
-               </font>
-            </TextField>
-         </children>
          <VBox.margin>
             <Insets left="15.0" right="20.0" top="30.0" />
          </VBox.margin>
+         <children>
+            <PasswordField fx:id="password_txt" prefHeight="34.0" prefWidth="323.0" promptText="Mot de Passe" styleClass="tf">
+               <font>
+                  <Font name="Georgia Bold Italic" size="15.0" />
+               </font>
+            </PasswordField>
+         </children>
       </HBox>
       <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0">
          <children>
-            <Button fx:id="login_btn" mnemonicParsing="false" onAction="#login" styleClass="pink-btn" text="Se connecter">
+            <Button fx:id="login_btn" mnemonicParsing="false" onAction="#login" styleClass="pink-btn" text="Se connecter" textFill="#030000">
                <font>
-                  <Font name="Georgia Bold Italic" size="14.0" />
+                  <Font name="Georgia Bold Italic" size="20.0" />
                </font>
             </Button>
          </children>

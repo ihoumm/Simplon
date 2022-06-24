@@ -11,6 +11,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
@@ -27,11 +28,11 @@ public class MainController implements Initializable{
 	
 	// Event Listener on Button[#Login_btn].onAction
 	@FXML
-	public void login() {
+	public void login(ActionEvent event) {
 		TranslateTransition translateT = new TranslateTransition();
-		translateT.setDuration(Duration.millis(2000));
+		translateT.setDuration(Duration.millis(500));
 		translateT.setNode(VBox);
-		translateT.setToX(VBox.getLayoutX() * 31);
+		translateT.setToX(VBox.getLayoutX() * 19);
 		translateT.play();
 		
 		translateT.setOnFinished(e ->{
@@ -49,7 +50,7 @@ public class MainController implements Initializable{
 	@FXML
 	public void signUp() {
 		TranslateTransition translateT = new TranslateTransition();
-		translateT.setDuration(Duration.millis(2000));
+		translateT.setDuration(Duration.millis(500));
 		translateT.setNode(VBox);
 		translateT.setToX(5);
 		
@@ -61,19 +62,19 @@ public class MainController implements Initializable{
 				VBox.getChildren().removeAll();
 				VBox.getChildren().setAll(fxml);
 			} catch (IOException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			
 		});
 		
 	}
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		TranslateTransition translateT = new TranslateTransition();
-		translateT.setDuration(Duration.millis(2000));
+		translateT.setDuration(Duration.millis(500));
 		translateT.setNode(VBox);
-		translateT.setToX(VBox.getLayoutX() * 31);
+		translateT.setToX(VBox.getLayoutX() * 19);
 		translateT.play();
 		
 		translateT.setOnFinished(e ->{

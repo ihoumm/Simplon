@@ -4,20 +4,22 @@ public class TodoList {
 	private int todoId;
 	private String title;
 	private String description;
+	private int categoryId;
 	private String status;
 	private String deadline;
-	private int categoryId;
+	
+	
 	public TodoList() {
 		super();
 	}
-	public TodoList(int todoId, String title, String description, String status, String deadline, int categoryId) {
+	public TodoList(int todoId, String title, String description, int categoryId, String status, String deadline) {
 		super();
 		this.todoId = todoId;
 		this.title = title;
 		this.description = description;
+		this.categoryId = categoryId;
 		this.status = status;
 		this.deadline = deadline;
-		this.categoryId = categoryId;
 	}
 	public int getTodoId() {
 		return todoId;
@@ -37,6 +39,12 @@ public class TodoList {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	public int getCategoryId() {
+		return categoryId;
+	}
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
+	}
 	public String getStatus() {
 		return status;
 	}
@@ -49,16 +57,11 @@ public class TodoList {
 	public void setDeadline(String deadline) {
 		this.deadline = deadline;
 	}
-	public int getCategoryId() {
-		return categoryId;
-	}
-	public void setCategoryId(int categoryId) {
-		this.categoryId = categoryId;
-	}
 	@Override
 	public String toString() {
-		return "TodoList [todoId=" + todoId + ", title=" + title + ", description=" + description + ", status=" + status
-				+ ", deadline=" + deadline + ", categoryId=" + categoryId + "]";
+		return "TodoList [todoId=" + todoId + ", title=" + title + ", description=" + description + ", categoryId="
+				+ categoryId + ", status=" + status + ", deadline=" + deadline + "]";
 	}
+	
 	
 }

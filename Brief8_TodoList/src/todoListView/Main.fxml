@@ -7,32 +7,31 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="467.0" prefWidth="893.0" styleClass="parent" stylesheets="@application.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="todoListController.MainController">
+<AnchorPane prefHeight="467.0" prefWidth="893.0" styleClass="parent" stylesheets="@application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todoListController.MainController">
    <children>
-      <Pane layoutX="297.0" layoutY="95.0" prefHeight="200.0" prefWidth="200.0" styleClass="pane" stylesheets="@application.css" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+      <Pane layoutX="297.0" layoutY="95.0" prefHeight="200.0" prefWidth="200.0" styleClass="main-pane" stylesheets="@application.css" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
          <children>
-            <Label layoutX="572.0" layoutY="90.0" text="Est-vous inscrit?">
+            <Label layoutX="555.0" layoutY="137.0" text="Est-vous inscrit?">
                <font>
                   <Font name="Georgia Bold Italic" size="25.0" />
                </font>
             </Label>
-            <Button fx:id="Login_btn" layoutX="600.0" layoutY="185.0" mnemonicParsing="false" onAction="#login" styleClass="trans-btn-white-border" stylesheets="@application.css" text="Se connecter">
+            <Button fx:id="Login_btn" layoutX="583.0" layoutY="232.0" mnemonicParsing="false" onAction="#login" styleClass="trans-btn-white-border" stylesheets="@application.css" text="Se connecter">
                <font>
                   <Font name="Georgia Bold Italic" size="20.0" />
                </font>
             </Button>
-            <Label layoutX="28.0" layoutY="90.0" text="Vous-n'êtes pas inscrit?">
+            <Label layoutX="30.0" layoutY="137.0" text="Vous-n'êtes pas inscrit?">
                <font>
                   <Font name="Georgia Bold Italic" size="25.0" />
                </font>
             </Label>
-            <Button fx:id="signUp_btn" layoutX="122.0" layoutY="184.0" mnemonicParsing="false" onAction="#signUp" styleClass="trans-btn-white-border" stylesheets="@application.css" text="S'inscrir">
+            <Button fx:id="signUp_btn" layoutX="124.0" layoutY="231.0" mnemonicParsing="false" onAction="#signUp" styleClass="trans-btn-white-border" stylesheets="@application.css" text="S'inscrir">
                <font>
                   <Font name="Georgia Bold Italic" size="20.0" />
                </font>
             </Button>
-            <VBox fx:id="VBox" layoutX="14.0" layoutY="-21.0" prefHeight="452.0" prefWidth="358.0" styleClass="white-pane" stylesheets="@application.css" />
+            <VBox fx:id="VBox" layoutX="22.0" layoutY="-22.0" prefHeight="452.0" prefWidth="358.0" styleClass="signIn-pane" stylesheets="@application.css" />
          </children>
       </Pane>
    </children>

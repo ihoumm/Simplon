@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="358.0" styleClass="white-pane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todoListController.SignUpController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="358.0" spacing="10.0" styleClass="signUp-pane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todoListController.SignUpController">
    <children>
-      <Label text="Se connecter">
+      <Label prefHeight="46.0" prefWidth="204.0" styleClass="pink-btn" stylesheets="@application.css" text="S'inscrir" textAlignment="CENTER">
          <font>
-            <Font name="Georgia Bold Italic" size="20.0" />
+            <Font name="Georgia Bold Italic" size="45.0" />
          </font>
          <VBox.margin>
             <Insets left="20.0" />
@@ -23,7 +23,7 @@
             <Insets left="15.0" right="20.0" top="10.0" />
          </VBox.margin>
          <children>
-            <TextField fx:id="username_txt" prefHeight="31.0" prefWidth="323.0" promptText="Nom d4utilisateur" styleClass="tf">
+            <TextField fx:id="username_txt" prefHeight="31.0" prefWidth="323.0" promptText="Nom d'utilisateur" styleClass="tf" stylesheets="@application.css">
                <font>
                   <Font name="Georgia Bold Italic" size="15.0" />
                </font>
@@ -42,23 +42,11 @@
             </TextField>
          </children>
       </HBox>
-      <HBox prefHeight="30.0" prefWidth="273.0" styleClass="tf_box" stylesheets="@application.css">
-         <VBox.margin>
-            <Insets left="15.0" right="20.0" top="30.0" />
-         </VBox.margin>
-         <children>
-            <TextField fx:id="confpwd_txt" prefHeight="31.0" prefWidth="323.0" promptText="Confirmer le mot de passe" styleClass="tf">
-               <font>
-                  <Font name="Georgia Bold Italic" size="15.0" />
-               </font>
-            </TextField>
-         </children>
-      </HBox>
       <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0">
          <children>
             <Button fx:id="inscrir_btn" mnemonicParsing="false" onAction="#SignUp" styleClass="pink-btn" text="S'inscrir">
                <font>
-                  <Font name="Georgia Bold Italic" size="14.0" />
+                  <Font name="Georgia Bold Italic" size="20.0" />
                </font>
             </Button>
          </children>
