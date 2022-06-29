@@ -3,6 +3,7 @@ package todoListController;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
@@ -18,10 +19,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import todoListDaoImpl.TodoListDaoImpl;
+import todoListDaoImpl.TodoDaoImp;
 import todoListEntity.TodoList;
 import javafx.scene.control.TableColumn;
 
@@ -47,7 +47,7 @@ public class TaskManagerController implements Initializable{
 	    @FXML
 	    private Button logOut_btn;
 	    
-	    TodoListDaoImpl list = new TodoListDaoImpl();
+	    TodoDaoImp todoDaoImp = new TodoDaoImp();
 	    
 	    Connection connect;
 		Statement statement;
@@ -91,19 +91,7 @@ public class TaskManagerController implements Initializable{
 			
 	    }
 	    
-	    public void showtasks() {
-	    	
-			ObservableList<TodoList> todoList =  list.ShowTodList();
-			
-			title_col.setCellValueFactory(new PropertyValueFactory<TodoList,String>("title"));
-			desc_col.setCellValueFactory(new PropertyValueFactory<TodoList,String>("description"));
-			cat_col.setCellValueFactory(new PropertyValueFactory<TodoList,Integer>("categoryId"));
-			Stat_col.setCellValueFactory(new PropertyValueFactory<TodoList,String>("status"));
-			deadline_col.setCellValueFactory(new PropertyValueFactory<TodoList,String>("deadline"));
-			
-			table.setItems(todoList);
-		}
-	    
+	  
 	    public ObservableList ShowTodList() {
 			ObservableList<TodoList> todoL = FXCollections.observableArrayList();
 		        
@@ -112,7 +100,7 @@ public class TaskManagerController implements Initializable{
 		            String readTodoList = "SELECT * FROM todolist";
 		            
 		    		ResultSet result;
-		        	
+
 		        	statement = connect.createStatement();
 		            result = statement.executeQuery(readTodoList);
 		            TodoList todoList;
@@ -132,8 +120,6 @@ public class TaskManagerController implements Initializable{
 
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
-			
-			showtasks();
-			
+			ShowTodList();		
 		}
 }

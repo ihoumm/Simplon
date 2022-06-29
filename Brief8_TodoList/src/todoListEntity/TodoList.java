@@ -8,10 +8,19 @@ public class TodoList {
 	private String status;
 	private String deadline;
 	
-	
 	public TodoList() {
 		super();
 	}
+	
+	public TodoList(String title, String description, int categoryId, String status, String deadline) {
+		super();
+		this.title = title;
+		this.description = description;
+		this.categoryId = categoryId;
+		this.status = status;
+		this.deadline = deadline;
+	}
+	
 	public TodoList(int todoId, String title, String description, int categoryId, String status, String deadline) {
 		super();
 		this.todoId = todoId;

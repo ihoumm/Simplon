@@ -54,4 +54,14 @@ public class TodoConnection {
 		
 		return 1;
 	}
+
+	public static void closePreparedStatement(PreparedStatement preStat) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void closeConnection(Connection todoconnect) {
+		// TODO Auto-generated method stub
+		
+	}
 }

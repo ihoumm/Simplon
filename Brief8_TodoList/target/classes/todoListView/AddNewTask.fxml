@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="358.0" styleClass="addTaskStyle" stylesheets="@application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todoListController.AddNewTaskController">
+   <children>
+      <Pane prefHeight="97.0" prefWidth="358.0">
+         <children>
+            <Label layoutX="7.0" prefHeight="97.0" prefWidth="149.0" text="Add" textAlignment="CENTER" textFill="#b8e994">
+               <font>
+                  <Font name="Bauhaus 93" size="85.0" />
+               </font>
+            </Label>
+            <Label layoutX="151.0" prefHeight="97.0" prefWidth="198.0" text=" Task" textAlignment="CENTER" textFill="#78e08f">
+               <font>
+                  <Font name="Bauhaus 93" size="85.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="9.0" layoutY="99.0" prefHeight="391.0" prefWidth="348.0" styleClass="addTaskStyle" stylesheets="@application.css" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Title" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="82.0" text="Description" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="208.0" text="Category" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="267.0" text="Status" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="325.0" text="Deadline" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="title_txt" layoutX="100.0" layoutY="17.0" prefHeight="25.0" prefWidth="243.0" styleClass="tf_box" stylesheets="@application.css" />
+            <TextField fx:id="desc_txt" layoutX="14.0" layoutY="113.0" prefHeight="82.0" prefWidth="327.0" styleClass="tf_box" stylesheets="@application.css" />
+            <TextField fx:id="cat_txt" layoutX="143.0" layoutY="214.0" prefHeight="25.0" prefWidth="198.0" styleClass="tf_box" stylesheets="@application.css" />
+            <TextField fx:id="status_txt" layoutX="106.0" layoutY="270.0" prefHeight="25.0" prefWidth="235.0" styleClass="tf_box" stylesheets="@application.css" />
+            <TextField fx:id="deadline_txt" layoutX="143.0" layoutY="328.0" prefHeight="25.0" prefWidth="198.0" styleClass="tf_box" stylesheets="@application.css" />
+         </children>
+      </Pane>
+      <Button fx:id="save_btn" layoutX="142.0" layoutY="475.0" mnemonicParsing="false" onAction="#SaveTask" styleClass="pink-btn" text="Save">
+         <font>
+            <Font name="Bauhaus 93" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="home_btn" layoutX="249.0" layoutY="475.0" mnemonicParsing="false" onAction="#Home" styleClass="pink-btn" text="Home">
+         <font>
+            <Font name="Bauhaus 93" size="23.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

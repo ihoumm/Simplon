@@ -5,19 +5,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import todoListDaoImpl.TodoListDaoImpl;
+import todoListDaoImpl.TodoDaoImp;
 import todoListEntity.TodoList;
-
 import java.io.IOException;
 
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 
 public class AddNewTaskController {
@@ -37,12 +33,24 @@ public class AddNewTaskController {
 	private Stage stage;
 	private Scene scene;
 	
-	TodoListDaoImpl list = new TodoListDaoImpl();
+	TodoDaoImp todoDaoImp = new TodoDaoImp();
 	
 	// Event Listener on Button[#save_btn].onAction
 	@FXML
 	public void SaveTask(ActionEvent event) {
+		
+		TodoList todoL = new TodoList(
+				
+				title_txt.getText(),
+				desc_txt.getText(),
+				Integer.parseInt(cat_txt.getText()),
+				status_txt.getText(),
+				deadline_txt.getText());
+		
+		todoDaoImp.create(todoL);
+		
 	}
+	
 	@FXML
     void Home(ActionEvent event) {
 		try {

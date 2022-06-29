@@ -5,6 +5,12 @@
 }
 .pane{
 	-fx-background-color: #33698F;
+	/*-fx-background-color : #7AA7D2;*/
+}
+.main-pane{
+	-fx-background-color: #33698F;
+	
+	-fx-background-radius: 100px 0px 100px 0px;
 }
 .trans-btn-white-border{
 	-fx-background-color: transparent ;
@@ -14,12 +20,31 @@
 	-fx-border-width: 1px;
 	-fx-text-fill: whitesmoke ;
 }
-.white-pane{
-	-fx-background-image : url("todoList.jpg");
-	-fx-background-size: 281 386;
+
+.default-pane{
+	-fx-background-image : url("company.jpg");
+	-fx-background-size: cover ;
+	-fx-background-repeat : no-repeat;
+	-fx-background-position: center center;
+}
+.signIn-pane{
+	-fx-background-image : url("SignIn.jpg");
+	-fx-background-size: cover ;
+	-fx-background-repeat : no-repeat;
 	-fx-background-position: center center;
 	-fx-background-color: transparent;
+	-fx-background-radius: 0px 100px 0px 100px;
 }
+
+.signUp-pane{
+	-fx-background-image : url("SignUp.jpg");
+	-fx-background-size: cover ;
+	-fx-background-repeat : no-repeat;
+	-fx-background-position: center center;
+	-fx-background-color: transparent;
+	-fx-background-radius: 0px 100px 0px 100px;
+}
+
 .tf_box{
 	-fx-background-color: transparent ;
 	-fx-border-color: #DEDEE4;
@@ -30,19 +55,23 @@
 	-fx-prompt-text-fill: #2C2C2C;
 }
 .pink-btn{
-	-fx-background-color: #C5304D;
+	-fx-background-color: #cccccc;
 	-fx-background-radius: 10px;
-	-fx-text-fill: whitesmoke;
+	-fx-text-fill: black;
 }
 
 .hpane{
 	-fx-background-color: #FFFFFF ;
 }
 
-.hpaneShadow{
-	-fx-background-color: black ;
+.icon-btn{
+	/*-fx-background-color: #b8e994;*/
+	-fx-background-color: transparent;
+	-fx-background-radius: 100px;
+	-fx-background-size: 80;
 }
 
-.addTaskPane{
-	-fx-background-color: #FFA64C;
+.addTaskStyle{
+	-fx-background-color: #33698F;
+	-fx-background-radius: 0px 100px 0px 100px;
 }
