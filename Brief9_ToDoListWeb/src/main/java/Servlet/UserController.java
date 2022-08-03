@@ -4,6 +4,12 @@ import java.io.IOException;
 
 import Dao.UserDao;
 import Model.User;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/Register")
 public class UserController extends HttpServlet  {
 
