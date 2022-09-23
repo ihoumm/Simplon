@@ -8,7 +8,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ibraWaKhait</groupId>
-	<artifactId>IbraWaKhait_ProjetFillRouge</artifactId>
+	<artifactId>ibraWaKhait-BackEnd</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>IbraWaKhait_ProjetFillRouge</name>
 	<description>Ibra Wa Khait Ecommerce Website</description>
