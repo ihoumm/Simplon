@@ -2,60 +2,51 @@ package com.ibraWaKhait.service.implementation;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import com.ibraWaKhait.exception.ResourceNotFoundException;
-import com.ibraWaKhait.model.Order;
 import com.ibraWaKhait.model.Product;
 import com.ibraWaKhait.repository.ProductRepository;
 import com.ibraWaKhait.service.ProductService;
 
-@Service
-public class ProductServiceImplementation implements ProductService{
+public class ProductServiceImplementation implements ProductService {
 	
 	private ProductRepository productRepository;
-	
+
 	@Override
 	public List<Product> getAllProducts() {
 		// TODO Auto-generated method stub
-		return productRepository.findAll();
+		return this.productRepository.findAll();
 	}
 
 	@Override
 	public Product addProduct(Product product) {
 		// TODO Auto-generated method stub
-		return this.productRepository.save(product);
+		return productRepository.save(product);
 	}
 
 	@Override
 	public Product getProductById(long id) {
 		// TODO Auto-generated method stub
-		return productRepository.findById(id).get();
+		return this.productRepository.findById(id).get();
 	}
 
 	@Override
 	public Product updateProduct(Product product, long id) {
+		Product ExestingProduct = productRepository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("productRepository", "id", id));
 		
-		Product existingProduct = productRepository.findById(id)
-				.orElseThrow(() -> new ResourceNotFoundException("invoiceRepository", "id", id));
+		ExestingProduct.setId(product.getId());
+		ExestingProduct.setSku(product.getSku());
+		ExestingProduct.setName(product.getName());
+		ExestingProduct.setDescription(product.getDescription());
+		ExestingProduct.setPrice(product.getPrice());
+		ExestingProduct.setImageUrl(product.getImageUrl());
+		ExestingProduct.setUnitsInStock(product.getUnitsInStock());
+		ExestingProduct.setInserted_at(product.getInserted_at());
+		ExestingProduct.setUpdated_at(product.getUpdated_at());
 		
-		existingProduct.setId(product.getId());
-		existingProduct.setProduct_sku(product.getProduct_sku());
-		existingProduct.setName(product.getName());
-		existingProduct.setDescription(product.getDescription());
-		existingProduct.setUnit_price(product.getUnit_price());
-		existingProduct.setImage_url(product.getImage_url());
-		existingProduct.setIs_active(product.getIs_active());
-		existingProduct.setUnits_in_stock(product.getUnits_in_stock());
-		existingProduct.setInserted_at(product.getInserted_at());
-		existingProduct.setUpdated_at(product.getUpdated_at());
-		existingProduct.setCategory(product.getCategory());
+		productRepository.save(ExestingProduct);
 		
-		
-		productRepository.save(existingProduct);
-		
-		return existingProduct;
-		
+		return ExestingProduct;
 	}
 
 	@Override
@@ -63,6 +54,5 @@ public class ProductServiceImplementation implements ProductService{
 		this.productRepository.deleteById(id);
 		
 	}
-
 
 }

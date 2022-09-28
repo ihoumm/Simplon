@@ -4,8 +4,6 @@ import java.util.List;
 
 import com.ibraWaKhait.model.User;
 
-
-
 public interface UserService {
 	
 	List<User> getAllUsers();
@@ -17,5 +15,5 @@ public interface UserService {
 	User updateUser(User user, long id);
 
 	void deleteUserById(long id);
-	
+
 }

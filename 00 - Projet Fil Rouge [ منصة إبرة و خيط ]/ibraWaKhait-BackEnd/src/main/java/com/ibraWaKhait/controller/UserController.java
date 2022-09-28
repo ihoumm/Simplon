@@ -10,15 +10,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-import com.ibraWaKhait.model.Product;
 import com.ibraWaKhait.model.User;
 import com.ibraWaKhait.service.UserService;
 
 public class UserController {
-
+	
 	private UserService userService;
 
 	public UserController(UserService userService) {
